@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wave Function Collapse – Terrain Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>⚛️ Wave Function Collapse – Terrain Grid</h1>
+      <p class="subtitle">Click any cell to start the collapse. Watch constraints propagate outward.</p>
+    </header>
+
+    <div id="controls">
+      <label>
+        Width
+        <input type="number" id="input-width" value="20" min="4" max="60" />
+      </label>
+      <label>
+        Height
+        <input type="number" id="input-height" value="14" min="4" max="40" />
+      </label>
+      <label>
+        Speed
+        <select id="input-speed">
+          <option value="5">Blazing</option>
+          <option value="20">Fast</option>
+          <option value="60" selected>Normal</option>
+          <option value="150">Slow</option>
+          <option value="400">Very Slow</option>
+        </select>
+      </label>
+      <button id="btn-reset">New Grid</button>
+    </div>
+
+    <div id="legend">
+      <span class="legend-item"><span class="swatch swatch-sea"></span> Sea (z=0)</span>
+      <span class="legend-item"><span class="swatch swatch-ground0"></span> Ground (z=0)</span>
+      <span class="legend-item"><span class="swatch swatch-ground2"></span> Ground (z=1–2)</span>
+      <span class="legend-item"><span class="swatch swatch-ground4"></span> Ground (z=3–5)</span>
+      <span class="legend-item"><span class="swatch swatch-mountain"></span> Mountain (z=6–10)</span>
+      <span class="legend-item"><span class="swatch swatch-house"></span> House</span>
+      <span class="legend-item"><span class="swatch swatch-superposition"></span> Superposition</span>
+    </div>
+
+    <div id="grid-wrapper">
+      <canvas id="grid-canvas"></canvas>
+    </div>
+
+    <div id="status-bar">
+      <span id="status-text">Click a cell to begin collapse…</span>
+      <span id="status-count"></span>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
