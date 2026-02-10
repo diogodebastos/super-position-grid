@@ -1,0 +1,7 @@
+{
+  "name": "super-position-grid",
+  "compatibility_date": "2025-03-25",
+  "assets": {
+    "directory": "./public"
+  }
+}
